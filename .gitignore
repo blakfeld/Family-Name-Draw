@@ -1,0 +1,6 @@
+env/
+populate_db.py
+db_reset.py
+*.db
+*.wsgi
+db_repository

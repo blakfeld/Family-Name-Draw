@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h1>Family Name Draw</h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h3>Instructions</h3>
+        <p>Just enter your name in the field (No cheating!) and click the button! If you hit enter, it won't work, so click the button! <b>Careful</b>, you only get one shot!</p>
+        <br>
+        <br>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-6" style="margin-left: 0; margin-right: 0;">
+            <form>
+                <div class="form-group">
+                    <label for="name">Who are you? (So you don't draw yourself)</label>
+                    <select id="username" class='form-control'>
+                    {% for member in family_members %}
+                        <option value="{{ member }}">{{ member }}</option>
+                    {% endfor %}
+                    </select>
+                </div>
+                <button id="drawName" type="submit" class="btn btn-primary pull-right">Draw Name</button>
+            </form>
+        </div>
+        <div id="result" class="col-md-6">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block jscript %}
+<script type="text/javascript" src="/static/js/drawName.js"></script>
+{% endblock %}
