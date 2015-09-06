@@ -1,4 +1,4 @@
-# Family Gift app
+# Family Gift App
 
 Every year my family draws names out of a hat to do a sort of Secret Santa
 for Christmas. This got difficult once all of us no longer lived in the same
