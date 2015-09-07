@@ -4,7 +4,12 @@
 
 var availablemembers;
 
-function showErrorMsg() {
+function showErrorMsg(msg) {
+    errMsg = msg ? msg : 'Unknown Error!'
+
+    $('#errorModalBody').empty()
+    $('#errorModalBody').append('<p>' + errMsg + '</p>')
+
     $('#errorModal').modal('show');
 }
 
@@ -49,6 +54,10 @@ function getAvailableMembers(currentUser) {
         success: function(data) {
             members = data.members;
             availablemembers = members;
+
+            if (availablemembers.length === 0) {
+                showErrorMsg("Everyone you're allowed to choose has been chosen.")
+            }
 
             $('#drawName').prop('disabled', false);
         }
@@ -109,7 +118,7 @@ $(document).ready(function() {
 
     $('#memberNames').change(function(e) {
         if ($('#memberNames').val() === "-1") {
-            showErrorMsg();
+            showErrorMsg('Invalid Selection!');
         } else {
             checkValidMember($('#memberNames').val());
         }

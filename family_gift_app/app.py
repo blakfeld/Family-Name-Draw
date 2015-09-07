@@ -121,4 +121,4 @@ if __name__ == '__main__':
 
     db = FamilySQLiteDB(os.path.join(MY_PATH, '..', 'family_gift_app.db'))
 
-    run(host='localhost', port=9001)  # , server='cherrypy')
+    run(host='0.0.0.0', port=9001)
