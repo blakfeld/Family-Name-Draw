@@ -117,7 +117,7 @@ class FamilySQLiteDB(object):
                                 (chooser_id, ))
 
             self.cursor.execute('UPDATE family_members SET chosen = 1, chosen_by = ? WHERE id = ?',
-                               (chooser.name, chosen_id))
+                                (chooser.name, chosen_id))
 
             self.db_conn.commit()
 
