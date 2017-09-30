@@ -1,4 +1,5 @@
 env/
+venv/
 populate_db.py
 db_reset.py
 *.db
@@ -8,4 +9,4 @@ db_repository
 data.sql
 generate_data_sql.py
 *.lock
-data.json
+*.working.json
