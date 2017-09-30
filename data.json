@@ -1,0 +1,128 @@
+{
+  "data": [
+    {
+      "name": "Mike",
+      "chosen": null,
+      "has_chosen": false,
+      "chosen_by": null,
+      "cannot_choose": [
+        "Kory",
+        "Krissa",
+        "Danielle"
+      ]
+    },
+    {
+      "name": "Krissa",
+      "chosen": null,
+      "has_chosen": false,
+      "chosen_by": null,
+      "cannot_choose": [
+        "Kory",
+        "Mike",
+        "Danille"
+      ]
+    },
+    {
+      "name": "Kory",
+      "chosen": null,
+      "has_chosen": false,
+      "chosen_by": null,
+      "cannot_choose": [
+        "Krissa",
+        "Mike",
+        "Danielle"
+      ]
+    },
+    {
+      "name": "Danielle",
+      "chosen": null,
+      "has_chosen": false,
+      "chosen_by": null,
+      "cannot_choose": [
+        "Krissa",
+        "Mike",
+        "Kory"
+      ]
+    },
+    {
+      "name": "Jennifer",
+      "chosen": null,
+      "has_chosen": false,
+      "chosen_by": null,
+      "cannot_choose": [
+        "Moe",
+        "Deshawn",
+        "TeArra"
+      ]
+    },
+    {
+      "name": "Moe",
+      "chosen": null,
+      "has_chosen": false,
+      "chosen_by": null,
+      "cannot_choose": [
+        "Jennifer",
+        "Deshawn",
+        "TeArra"
+      ]
+    },
+    {
+      "name": "Dee",
+      "chosen": null,
+      "has_chosen": false,
+      "chosen_by": null,
+      "cannot_choose": [
+        "Jennifer",
+        "Moe",
+        "TeArra"
+      ]
+    },
+    {
+      "name": "TeArra",
+      "chosen": null,
+      "has_chosen": false,
+      "chosen_by": null,
+      "cannot_choose": [
+        "Jennifer",
+        "Moe",
+        "Deshawn"
+      ]
+    },
+    {
+      "name": "Christine",
+      "chosen": null,
+      "has_chosen": false,
+      "chosen_by": null,
+      "cannot_choose": [
+        "Justin"
+      ]
+    },
+    {
+      "name": "Justin",
+      "chosen": null,
+      "has_chosen": false,
+      "chosen_by": null,
+      "cannot_choose": [
+        "Christine"
+      ]
+    },
+    {
+      "name": "Ben",
+      "chosen": null,
+      "has_chosen": false,
+      "chosen_by": null,
+      "cannot_choose": [
+        "Jo"
+      ]
+    },
+    {
+      "name": "Jo",
+      "chosen": null,
+      "has_chosen": false,
+      "chosen_by": null,
+      "cannot_choose": [
+        "Ben"
+      ]
+    }
+  ]
+}

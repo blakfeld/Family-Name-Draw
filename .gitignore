@@ -9,4 +9,4 @@ db_repository
 data.sql
 generate_data_sql.py
 *.lock
-data.json
+*.working.json
