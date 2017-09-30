@@ -1,4 +1,5 @@
 env/
+venv/
 populate_db.py
 db_reset.py
 *.db
