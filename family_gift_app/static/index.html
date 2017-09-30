@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Family Name Draw</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+  <link href="/assets/libs/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+
+</head>
+<body ng-app="familyNameDraw">
+
+  <div class="container" ng-controller="MainController">
+    <div class="row justify-content-center">
+
+      <div class="col-sm-12 col-md-6">
+          <h2 class="page-header">Brown Family Name Draw</h2>
+
+          <div class="text-center" ng-if="showLoading">
+            <i class="fa fa-cog fa-4x fa-spin"></i>
+          </div>
+
+          <div ng-if="!showLoading">
+
+            <div class="form-group">
+              <label>Who are you?</label>
+              <select class="form-control form-control-lg"
+                      ng-model="state.selectedMember"
+                      ng-options="m.name for m in state.familyMembers"
+                      ng-change="updateSelect()">
+              </select>
+            </div>
+
+            <div ng-if="state.selectedMember">
+              <div class="float-right">
+                <button class="btn btn-primary"
+                        ng-click="drawName()"
+                        ng-disabled="disableButton">
+                  Draw Name
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="row justify-content-center">
+
+        <div class="col-sm-12 col-md-6" ng-if="showResults">
+
+          <div ng-if="resultsLoading">
+            <div class="text-center">
+              <i class="fa fa-cog fa-4x fa-spin"></i>
+            </div>
+          </div>
+
+          <div ng-if="!resultsLoading && state.result">
+            <div class="text-center">
+              <h4>You Drew</h4>
+              <h2>{{ state.result.name }} </h2>
+            </div>
+          </div>
+
+          <div ng-if="showEverythingsTerrible">
+            <h2>Everything's Terrible</h2>
+
+            <p>Ugh. There's a chance this could happen... This app is written such that you can't choose your spouse
+            or children (because what would be the fun there?). That makes the numbers such that it's possible that
+            someone can not be allowed to draw.</p>
+
+            <p>If you see this message, this has happened. Just let me know, and we'll figure out who to swap you with.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js" type="application/javascript"></script>
+
+
+  <!-- Main App JS -->
+  <script src="/assets/js/app.js" type="application/javascript"></script>
+
+</body>
+</html>

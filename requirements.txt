@@ -1,3 +1,5 @@
-CherryPy==3.8.0
-bottle==0.12.8
-wsgiref==0.1.2
+bottle==0.12.13
+docopt==0.6.2
+filelock==2.0.12
+Paste==2.0.3
+six==1.11.0
